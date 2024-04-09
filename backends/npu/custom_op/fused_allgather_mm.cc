@@ -105,6 +105,7 @@ std::vector<paddle::Tensor> npu_allgather_mm(
                *out_gather_mm,
                *out_gather);
 #endif
+  VLOG(6) << "gongwb before npu_allgather_mm return";
   return {paddle::Tensor(out_gather_mm), paddle::Tensor(out_gather)};
 }
 
